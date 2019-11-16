@@ -1,0 +1,25 @@
+# Front End --------------------------------------------------------------------------------
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/front-end/plaidypus-code-challenge-front-end/node_modules
+/front-end/plaidypus-code-challenge-front-end/.pnp
+/front-end/plaidypus-code-challenge-front-end/.pnp.js
+
+# testing
+/front-end/plaidypus-code-challenge-front-end/coverage
+
+# production
+/front-end/plaidypus-code-challenge-front-end/build
+
+# misc
+/front-end/plaidypus-code-challenge-front-end/.DS_Store
+/front-end/plaidypus-code-challenge-front-end/.env.local
+/front-end/plaidypus-code-challenge-front-end/.env.development.local
+/front-end/plaidypus-code-challenge-front-end/.env.test.local
+/front-end/plaidypus-code-challenge-front-end/.env.production.local
+
+/front-end/plaidypus-code-challenge-front-end/npm-debug.log*
+/front-end/plaidypus-code-challenge-front-end/yarn-debug.log*
+/front-end/plaidypus-code-challenge-front-end/yarn-error.log*
