@@ -13,9 +13,12 @@ export class SearchPage extends React.Component {
         this.updateSearchResults = this.updateSearchResults.bind(this);
     }
     updateSearchResults(results) {
-       this.setState({
+        if (results.businesses.length === 0) {
+            alert("No Business could be found.")
+        }
+        this.setState({
            results: results.businesses
-       });
+        });
     }
     render() {
         return (

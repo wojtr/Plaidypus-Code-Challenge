@@ -19,7 +19,6 @@ class YelpFusionAPI {
                 Authorization: `Bearer ${this.apiKey}`,
             }
         };
-        console.log(options);
         const request = https.request(options, res => {
             let data = '';
             res.on('data', chunk => {
