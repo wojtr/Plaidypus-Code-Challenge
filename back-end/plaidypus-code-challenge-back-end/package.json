@@ -1,0 +1,14 @@
+{
+  "name": "plaidypus-code-challenge-back-end",
+  "version": "1.0.0",
+  "description": "This is the back end for a two page application that uses the Yelp Fusion API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Wojtanek",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
