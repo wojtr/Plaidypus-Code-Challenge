@@ -5,7 +5,6 @@ import './BusinessPage.css';
 
 export class BusinessPage extends React.Component {
     render() {
-        console.log(this.props.details);
         return (
             <Container>
                 <Row className="m-4">

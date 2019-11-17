@@ -6,23 +6,28 @@ const YelpFusionSearchAPI = require('./YelpFusionSearchAPI');
 const YelpFusionBusinessAPI = require('./YelpFusionBusinessAPI');
 const API_KEY = 'OuXTRZohluejbYr3JZvkLJPSkqFvWvAmi0EMWgOYRpoOJMHcSFwOqNFn6AL_GrY-HvUq-OXOfSXHkeNPyKtV_SQLyngMYAys3c_Q5Ft9RvHOFvazT6yZCWdr3JPQXXYx';
 
+
 app.get('/search', (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     if (!req.query.location) {
         res.status(400).send({error: 'Location not specifyed in query parameters.'});
     } else if (typeof req.query.location !== 'string') {
         res.status(400).send({error: 'Location query parameter is not a string.'});
     }  else {
+        req.query.location = req.query.location.replace(' ', '%20');
         let request = new YelpFusionSearchAPI(API_KEY);
         request.search(res, req.query.location);
     }
 });
 
 app.get('/business', (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     if (!req.query.id) {
         res.status(400).send({error: 'Business ID not specifyed in query parameters.'});
     } else if (typeof req.query.id !== 'string') {
         res.status(400).send({error: 'Business ID query parameter is not a string.'});
     }  else {
+        req.query.id = req.query.id.replace(' ', '%20');
         let request = new YelpFusionBusinessAPI(API_KEY);
         request.details(res, req.query.id);
     }

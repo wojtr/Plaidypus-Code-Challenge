@@ -13,9 +13,9 @@ export class App extends React.Component {
     }
     this.updateBuisinessDetails = this.updateBuisinessDetails.bind(this);
   }
-  updateBuisinessDetails(id, details) {
+  updateBuisinessDetails(details) {
     this.setState({
-      businessid: id,
+      businessid: details.id,
       details: details
     });
   }

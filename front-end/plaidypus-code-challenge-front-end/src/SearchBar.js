@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Form, FormControl, Button } from 'react-bootstrap';
+import { makeHTTPRequest } from './HTTPRequest';
 import './SearchBar.css';
 
 export class SearchBar extends React.Component {
@@ -10,22 +11,8 @@ export class SearchBar extends React.Component {
     }
     search() {
         let location = ReactDOM.findDOMNode(this.refs.Search).value;
-        console.log(`Calling Back End, searching for bussiness in ${location} and then updating the search results.`)
-         /* 
-            Todo:
-                Call back end with text provided by search bar.
-                Updated result list based on the response from back end.
-        */
-        let results = [{
-            "id": "1",
-            "name": "Four Barrel Coffee"
-          },
-          {
-            "id": "2",
-            "name": "StarBucks"
-          }
-        ];
-        this.props.updateSearchResults(results);
+        let path = `/search?location=${location}`;
+        makeHTTPRequest(this.props.updateSearchResults, path);
     }
     render() {
         return (

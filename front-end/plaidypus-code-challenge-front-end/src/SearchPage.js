@@ -14,7 +14,7 @@ export class SearchPage extends React.Component {
     }
     updateSearchResults(results) {
        this.setState({
-           results: results
+           results: results.businesses
        });
     }
     render() {
