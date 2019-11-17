@@ -10,13 +10,13 @@ export class BusinessPage extends React.Component {
                 <Row className="m-4">
                     <Link to="/">Return to Search</Link>
                 </Row>
-                <Row>
+                <Row className="m-4">
                     <h1>{this.props.details.name}</h1>
                 </Row>
-                <Row>
+                <Row className="m-4">
                     <p>{this.props.details.location.display_address[0]}, {this.props.details.location.display_address[1]}</p>
                 </Row>
-                <Row className="m-10">
+                <Row className="m-4">
                     <p>Rating: {this.props.details.rating} Stars with {this.props.details.review_count} reviews</p>
                 </Row>
             </Container>

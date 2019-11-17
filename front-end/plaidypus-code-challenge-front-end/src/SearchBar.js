@@ -9,6 +9,9 @@ export class SearchBar extends React.Component {
         super();
         this.search = this.search.bind(this);
     }
+    /*
+        Calls the begining of the search based on the users input.
+    */
     search() {
         let location = ReactDOM.findDOMNode(this.refs.Search).value;
         if (location !== '') {

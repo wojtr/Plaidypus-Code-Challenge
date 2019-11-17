@@ -13,6 +13,16 @@ export class App extends React.Component {
     }
     this.updateBuisinessDetails = this.updateBuisinessDetails.bind(this);
   }
+  componentDidMount() {
+    document.addEventListener('keypress', event => {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+      }
+    });
+  }
+  /*
+    Updates the DOM with the results of the yelp business API call.
+  */
   updateBuisinessDetails(details) {
     this.setState({
       businessid: details.id,

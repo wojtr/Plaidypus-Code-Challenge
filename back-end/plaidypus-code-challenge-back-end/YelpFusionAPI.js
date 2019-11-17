@@ -10,6 +10,12 @@ class YelpFusionAPI {
     set apiKey(value) {
         this._apikey = value;
     }
+    /*
+        This method creates and sends the nessary Yelp Fusion API request.
+            serverRes: Once the data has been recieve and processed the response to the front end is sent.
+            parser: function passed in to curate the information sent back to the Front End.
+            path: path to the correct API.
+    */
     makeHttpRequest(serverRes, parser, path) {
         let options = {
             hostname: 'api.yelp.com',

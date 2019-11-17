@@ -6,7 +6,9 @@ const YelpFusionSearchAPI = require('./YelpFusionSearchAPI');
 const YelpFusionBusinessAPI = require('./YelpFusionBusinessAPI');
 const API_KEY = 'OuXTRZohluejbYr3JZvkLJPSkqFvWvAmi0EMWgOYRpoOJMHcSFwOqNFn6AL_GrY-HvUq-OXOfSXHkeNPyKtV_SQLyngMYAys3c_Q5Ft9RvHOFvazT6yZCWdr3JPQXXYx';
 
-
+/*
+    Sets up route for a call to the Yelp Fusion search api done calling request.search. This also checks that the location value is valid.
+*/
 app.get('/search', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     if (!req.query.location) {
@@ -20,6 +22,9 @@ app.get('/search', (req, res) => {
     }
 });
 
+/*
+    Sets up route for a call to the Yelp Fusion business api done calling request.search. This also checks that the id value is valid.
+*/
 app.get('/business', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     if (!req.query.id) {
