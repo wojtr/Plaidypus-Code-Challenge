@@ -3,6 +3,9 @@ const YelpFusionAPI = require('./YelpFusionAPI');
 class YelpFusionSearchAPI extends YelpFusionAPI {
     parseData(data) {
         let businesses = {businesses: []};
+        if (data.error) {
+            return businesses;
+        }
         for (let business of data.businesses) {
             businesses.businesses.push({ id: business.id, name: business.name });
         }
