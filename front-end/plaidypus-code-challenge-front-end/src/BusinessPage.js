@@ -17,7 +17,7 @@ export class BusinessPage extends React.Component {
                     <p>{this.props.details.location.display_address[0]}, {this.props.details.location.display_address[1]}</p>
                 </Row>
                 <Row className="m-10">
-                    <p>Rating: {this.props.details.rating} with {this.props.details.review_count} reviews</p>
+                    <p>Rating: {this.props.details.rating} Stars with {this.props.details.review_count} reviews</p>
                 </Row>
             </Container>
         );

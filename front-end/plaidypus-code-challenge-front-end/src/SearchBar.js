@@ -11,8 +11,10 @@ export class SearchBar extends React.Component {
     }
     search() {
         let location = ReactDOM.findDOMNode(this.refs.Search).value;
-        let path = `/search?location=${location}`;
-        makeHTTPRequest(this.props.updateSearchResults, path);
+        if (location !== '') {
+            let path = `/search?location=${location}`;
+            makeHTTPRequest(this.props.updateSearchResults, path);
+        }
     }
     render() {
         return (
