@@ -18,7 +18,7 @@ export class SearchPage extends React.Component {
     */
     updateSearchResults(results) {
         if (results.businesses.length === 0) {
-            alert("No Business could be found.")
+            alert("No Businesses could be found.")
         }
         results.businesses.sort((a, b) => {
             if (a.name > b.name) {
