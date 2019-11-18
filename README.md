@@ -11,7 +11,7 @@ This project contains two main portions.
 
 Quick Start
 
-    1. Clone this repository and you should see tow main folders, front-end (React) and back-end (Express).
+    1. Clone this repository and you should see two main folders, front-end (React) and back-end (Express).
 
     2. Start the Express Server.
 
