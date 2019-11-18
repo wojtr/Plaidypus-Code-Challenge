@@ -10,6 +10,7 @@ class YelpFusionBusinessAPI extends YelpFusionAPI {
             id: data.id, 
             name: data.name,
             url: data.url,
+            photos: data.photos,
             display_phone: data.display_phone,
             review_count: data.review_count,
             rating: data.rating,
