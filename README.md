@@ -1,7 +1,7 @@
 # Plaidypus-Code-Challenge
 This project is a two page web application using the Yelp Fusion API.
 
-This project contains tow main portions.
+This project contains two main portions.
 
     1. React Front-End
         This uses React to render the projects. Bootstrap was to make styling easier, however I tried to keep the UI as simple as I could.
