@@ -7,7 +7,7 @@ This project contains tow main portions.
         This uses React to render the projects. Bootstrap was to make styling easier, however I tried to keep the UI as simple as I could.
 
     2. Express Back-End
-        I used express to create a pair of API routes that were used to pass information into a Yelp Fusion API call.
+        I used Express to create a pair of API routes that were used to pass information into a Yelp Fusion API call.
 
 Quick Start
 
@@ -17,7 +17,7 @@ Quick Start
 
         cd /back-end/plaidypus-code-challenge-back-end
         npm install
-        npm start
+        node index.js
 
     3. Start the React Server.
     

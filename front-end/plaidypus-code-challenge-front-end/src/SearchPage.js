@@ -20,6 +20,14 @@ export class SearchPage extends React.Component {
         if (results.businesses.length === 0) {
             alert("No Business could be found.")
         }
+        results.businesses.sort((a, b) => {
+            if (a.name > b.name) {
+                return 1;
+            } else if (a.name < b.name) {
+                return -1;
+            }
+            return 0;
+        });
         this.setState({
            results: results.businesses
         });
