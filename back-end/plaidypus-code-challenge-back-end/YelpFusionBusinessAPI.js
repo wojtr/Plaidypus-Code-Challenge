@@ -9,10 +9,12 @@ class YelpFusionBusinessAPI extends YelpFusionAPI {
         let business = { 
             id: data.id, 
             name: data.name,
+            url: data.url,
             display_phone: data.display_phone,
             review_count: data.review_count,
             rating: data.rating,
-            location: data.location
+            location: data.location,
+            hours: data.hours
         };
         return business;
     }

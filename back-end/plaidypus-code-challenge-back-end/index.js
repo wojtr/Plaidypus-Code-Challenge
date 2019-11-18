@@ -16,7 +16,7 @@ app.get('/search', (req, res) => {
     } else if (typeof req.query.location !== 'string') {
         res.status(400).send({error: 'Location query parameter is not a string.'});
     }  else {
-        req.query.location = req.query.location.replace(' ', '%20');
+        req.query.location = req.query.location.replace(/ /g, '%20');
         let request = new YelpFusionSearchAPI(API_KEY);
         request.search(res, req.query.location);
     }
@@ -32,7 +32,7 @@ app.get('/business', (req, res) => {
     } else if (typeof req.query.id !== 'string') {
         res.status(400).send({error: 'Business ID query parameter is not a string.'});
     }  else {
-        req.query.id = req.query.id.replace(' ', '%20');
+        req.query.id = req.query.id.replace(/ /g, '%20');
         let request = new YelpFusionBusinessAPI(API_KEY);
         request.details(res, req.query.id);
     }

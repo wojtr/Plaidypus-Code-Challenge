@@ -39,6 +39,9 @@ export class App extends React.Component {
           <Route exact path={`/${this.state.businessid}`}>
             <BusinessPage id={this.state.businessid} details={this.state.details} />
           </Route>
+          <Route path="/">
+            <SearchPage updateBuisinessDetails={this.updateBuisinessDetails} />
+          </Route>
         </Switch>
       </Router>
     );
