@@ -17,6 +17,7 @@ Quick Start
 
         cd /back-end/plaidypus-code-challenge-back-end
         npm install
+        Add your Yelp Fusion API Key into the variable API_KEY in index.js.
         node index.js
 
     3. Start the React Server.

@@ -4,7 +4,7 @@ const port = 8080;
 
 const YelpFusionSearchAPI = require('./YelpFusionSearchAPI');
 const YelpFusionBusinessAPI = require('./YelpFusionBusinessAPI');
-const API_KEY = 'OuXTRZohluejbYr3JZvkLJPSkqFvWvAmi0EMWgOYRpoOJMHcSFwOqNFn6AL_GrY-HvUq-OXOfSXHkeNPyKtV_SQLyngMYAys3c_Q5Ft9RvHOFvazT6yZCWdr3JPQXXYx';
+const API_KEY = /* Please put your Yelp Fusion API key here as a string. */;
 
 /*
     Sets up route for a call to the Yelp Fusion search api done calling request.search. This also checks that the location value is valid.
